@@ -1,0 +1,80 @@
+<html>
+    <style>
+        input[type=submit] {
+            background-color: orange;
+            font-size: 1em;
+            border-radius: 8px;
+            padding: 12px;
+            border: 1px;
+            box-shadow: 0 1px 0 0 darkorange inset;
+            cursor: pointer;
+         }
+        label{
+            display: inline-block;
+            width: 15%;
+            text-align: right;
+            margin: 2px;
+        }
+        </style>
+    <head>
+        <title>Heart Failure Prediction Model</title>
+    </head>
+    <body>
+
+        <center>
+
+            <h1> Heart Failure Prediction </h1><br>
+
+            <form method="POST", action="{{url_for('home')}}">
+               <b>
+                   <label for="age">Age : </label>
+                    <input type="text", name='age' placeholder="in years" required> <br><br>
+                   <label for="anaemia">Anaemia : </label>
+                    <input list="anaemia" name="anaemia" placeholder="Yes/No" required>
+                              <datalist id="anaemia">
+                                <option value="Yes">
+                                <option value="No">
+                              </datalist> <br><br>
+                   <label for="creatinine_phosphokinase">Creatinine Phosphokinase : </label>
+                    <input type="text", name='creatinine_phosphokinase' placeholder="in mcg/L unit" required> <br><br>
+                   <label for="diabetes">Diabetes : </label>
+                    <input list="diabetes" name="diabetes" placeholder="Yes/No" required>
+                              <datalist id="diabetes">
+                                <option value="Yes">
+                                <option value="No">
+                              </datalist> <br><br>
+                   <label for="ejection_fraction">Ejection Fraction : </label>
+                    <input type="text", name='ejection_fraction' placeholder="percentage" required> <br><br>
+                   <label for="high_blood_pressure">High Blood Pressure : </label>
+                    <input list="high_blood_pressure" name="high_blood_pressure" placeholder="Yes/No" required>
+                              <datalist id="high_blood_pressure">
+                                <option value="Yes">
+                                <option value="No">
+                              </datalist> <br><br>
+                   <label for="platelets">Platelets : </label>
+                    <input type="text", name='platelets' placeholder="in kiloplatelets/mL unit" required> <br><br>
+                   <label for="serum_creatinine">Serum Creatinine : </label>
+                    <input type="text", name='serum_creatinine' placeholder="in mg/dL unit" required> <br><br>
+                   <label for="serum_sodium">Serum Sodium : </label>
+                    <input type="text", name='serum_sodium' placeholder="in mEq/L unit" required> <br><br>
+                   <label for="sex">Sex : </label>
+                    <input list="sex" name="sex" placeholder="Male/Female" required>
+                              <datalist id="sex">
+                                <option value="Male">
+                                <option value="Female">
+                              </datalist> <br><br>
+                   <label for="smoking">Smoking : </label>
+                    <input list="smoking" name="smoking" placeholder="Yes/No" required>
+                              <datalist id="smoking">
+                                <option value="Yes">
+                                <option value="No">
+                              </datalist> <br><br>
+                   <label for="time">Follow-up Time : </label>
+                    <input type="text", name='time' placeholder="in days" required> <br><br><br></b>
+                <input type="submit" , value='Predict!' >
+            </form>
+
+        </center>
+
+    </body>
+</html>
