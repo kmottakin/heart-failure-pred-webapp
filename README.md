@@ -1,1 +1,1 @@
-# heart-failure-pred-webapp
+# Web app for Heart Failure Prediction
